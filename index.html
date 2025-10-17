@@ -1,61 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FYJC Portal — Coming Soon</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FYJC Portal - Elphinstone College</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/a2e0e6adf3.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <main class="container">
-    <header class="brand">
-      <div class="logo">🎒</div>
-      <h1>FYJC Portal</h1>
+    <!-- Welcome Header -->
+    <header class="welcome-header">
+      <button class="back-btn" id="backBtn">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <div class="welcome-text">
+        <h1>Welcome to FYJC Portal</h1>
+        <p>Elphinstone College</p>
+      </div>
     </header>
 
-    <section class="hero">
-      <h2>FYJC Portal was closed — it will start again soon!</h2>
-      <p class="tag">
-        We’re working hard to bring the portal back with updated schedules, notices, and study materials.
-      </p>
-
-      <div class="status-card">
-        <p class="status-text">🔧 Temporarily Closed — Relaunching Soon</p>
-        <div class="progress">
-          <div class="progress-fill" id="progressFill"></div>
-        </div>
-        <p class="progress-note">
-          Progress: <span id="progressPercent">40</span>%
-        </p>
+    <!-- Subject List -->
+    <div class="subject-list">
+      <div class="subject" data-url="https://pysics.vercel.app">
+        <i class="fas fa-atom icon physics"></i>
+        <h2>Physics</h2>
       </div>
 
-      <div class="cta">
-        <label for="email">Get notified when FYJC Portal returns:</label>
-        <div class="subscribe">
-          <input id="email" type="email" placeholder="your@email.com" aria-label="email">
-          <button id="notifyBtn">Notify Me</button>
-        </div>
-        <p id="msg" class="msg" role="status" aria-live="polite"></p>
+      <div class="subject" data-url="https://byology.vercel.app">
+        <i class="fas fa-leaf icon biology"></i>
+        <h2>Biology</h2>
       </div>
 
-      <div class="features">
-        <div class="feature">
-          <h3>✔ Notices & Circulars</h3>
-          <p>Get official updates and schedules as soon as they are released.</p>
-        </div>
-        <div class="feature">
-          <h3>✔ Study Resources</h3>
-          <p>Access notes, question papers, and other helpful materials.</p>
-        </div>
-        <div class="feature">
-          <h3>✔ Easy Access</h3>
-          <p>Simple, fast, and organized for FYJC students.</p>
-        </div>
+      <div class="subject" data-url="https://mathematics-all.vercel.app">
+        <i class="fas fa-square-root-alt icon math"></i>
+        <h2>Mathematics</h2>
       </div>
 
-      <!-- Very small hidden watermark -->
-      <footer class="signature">Made by Harsh</footer>
-    </section>
+      <div class="subject" data-url="https://chemistry-neon.vercel.app">
+        <i class="fas fa-flask icon chemistry"></i>
+        <h2>Chemistry</h2>
+      </div>
+    </div>
+
+    <!-- Iframe for Subject -->
+    <div class="iframe-container">
+      <iframe id="subjectFrame" src=""></iframe>
+    </div>
   </main>
 
   <script src="script.js"></script>
